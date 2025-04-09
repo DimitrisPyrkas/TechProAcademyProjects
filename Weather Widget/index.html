@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="app-container">
+    <div class="glass-card">
+
+      <div class="location-date">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Thessaloniki</span>
+        </div>
+        <div class="date" id="current-date">--</div>
+      </div>
+
+      <div class="weather-main">
+        <img id="weather-icon" src="icons/" alt="Weather Icon"/>
+        <div class="temp-main">
+          <div id="temperature">-- °C</div>
+          <div id="weather-description">--</div>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item"><i class="fas fa-temperature-low"></i><div><label>Feels Like</label><span id="feels-like">-- °C</span></div></div>
+        <div class="info-item"><i class="fas fa-tint"></i><div><label>Humidity</label><span id="humidity">-- %</span></div></div>
+        <div class="info-item"><i class="fas fa-wind"></i><div><label>Wind Speed</label><span id="wind-speed">-- km/h</span></div></div>
+        <div class="info-item"><i class="fas fa-compass"></i><div><label>Wind Direction</label><span id="wind-direction">--°</span></div></div>
+        <div class="info-item"><i class="fas fa-arrow-trend-up"></i><div><label>Wind Gust</label><span id="wind-gust">-- km/h</span></div></div>
+        <div class="info-item"><i class="fas fa-gauge"></i><div><label>Pressure</label><span id="pressure">-- hPa</span></div></div>
+      </div>
+
+      <div class="controls">
+        <button id="now-btn">Now</button>
+        <button id="today-btn">Today</button>
+        <select id="date-select"><option disabled selected>Select a date</option></select>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="temp-chart"></canvas>
+      </div>
+    </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

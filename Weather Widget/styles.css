@@ -1,0 +1,151 @@
+:root {
+    --bg-light: linear-gradient(to right, #fceabb, #f8b500);
+    --card-bg-light: rgba(255, 255, 255, 0.3);
+    --text-dark: #222831;
+    --border-glass: rgba(255, 255, 255, 0.3);
+    --accent-color: #ff6f61;
+    --hover-glow: rgba(255, 255, 255, 0.4);
+    --blur: blur(10px);
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    transition: background 0.6s ease, color 0.3s ease;
+  }
+  
+  .app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .glass-card {
+    background: var(--card-bg-light);
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: var(--blur);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-glass);
+    transition: background 0.4s ease;
+  }
+  
+  .location-date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  .weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .weather-main img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .temp-main {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .temp-main div:last-child {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .info-item:hover {
+    transform: scale(1.03);
+    background: var(--hover-glow);
+  }
+  
+  .info-item i {
+    font-size: 20px;
+    color: var(--accent-color);
+  }
+  
+  .info-item label {
+    font-size: 12px;
+    display: block;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  .controls button,
+  .controls select {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .controls button:hover,
+  .controls select:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+  }
+  
+  #temperature {
+    transition: transform 0.3s ease;
+  }
+  
+  .temp-main:hover #temperature {
+    transform: scale(1.05);
+  }
+  .chart-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
